@@ -1,0 +1,6 @@
+module Pods_SchoolBridge_SchoolBridgeTests {
+  umbrella header "Pods-SchoolBridge-SchoolBridgeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

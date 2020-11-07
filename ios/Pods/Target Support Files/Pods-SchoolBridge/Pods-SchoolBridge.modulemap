@@ -1,0 +1,6 @@
+module Pods_SchoolBridge {
+  umbrella header "Pods-SchoolBridge-umbrella.h"
+
+  export *
+  module * { export * }
+}
