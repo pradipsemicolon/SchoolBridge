@@ -18,6 +18,9 @@ import AbsentHistory from '../screen/AbsentHistory/AbsentHistory';
 import Alert from '../screen/Alert/Alert';
 import MealCalender from '../screen/MealCalender/MealCalender';
 import TeacherComments from '../screen/TeacherComment/TeacherComments';
+import Gallery from '../screen/Gallery/Gallery';
+import SubListGallery from '../screen/SubListGallery/SubListGallery';
+import PreviewImage from '../screen/SubListGallery/PreviewImage';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator()
@@ -69,7 +72,7 @@ export default class Route extends Component {
     render() {
         return (
             <NavigationContainer >
-                <Stack.Navigator initialRouteName='TeacherComments' headerMode='none'>
+                <Stack.Navigator initialRouteName='PreviewImage' headerMode='none'>
                     <Stack.Screen name="Login" component={Login} />
                     <Stack.Screen name="main" component={BottomTab} />
                     <Stack.Screen name="AddLink" component={AddLink} />
@@ -78,6 +81,9 @@ export default class Route extends Component {
                     <Stack.Screen name="Alert" component={Alert} />
                     <Stack.Screen name="MealCalender" component={MealCalender} />
                     <Stack.Screen name="TeacherComments" component={TeacherComments} />
+                    <Stack.Screen name="Gallery" component={Gallery} />
+                    <Stack.Screen name="SubListGallery" component={SubListGallery} />
+                    <Stack.Screen name="PreviewImage" component={PreviewImage} />
                 </Stack.Navigator>
             </NavigationContainer>
 

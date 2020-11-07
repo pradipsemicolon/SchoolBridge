@@ -95,7 +95,7 @@ export default class TeacherComments extends Component {
         <SafeAreaView>
 
           {/* header  */}
-          <View style={LoginStyle.headerView}>
+          <View style={[LoginStyle.headerView,{marginLeft: wp(0)}]}>
             <TouchableOpacity>
               <FontAwesome name="angle-left" size={25} color={Colors.themeColor} />
             </TouchableOpacity>
@@ -147,7 +147,7 @@ export default class TeacherComments extends Component {
                                 fontSize: 10
                               }}>
                               10:32 AM
-                                   </Text>
+                            </Text>
 
 
                           </View>
@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
   section2: {
     backgroundColor: 'white',
     marginTop: hp(2.68),
-    height: hp(65.06),
+    height: hp(70.06),
     // alignItems:'center',
     // justifyContent: 'center',
     // alignContent:'center',

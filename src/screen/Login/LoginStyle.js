@@ -16,12 +16,12 @@ export const LoginStyle = StyleSheet.create({
     headerView: {
         flexDirection: 'row',
         marginTop: hp(3.54),
-        marginLeft:wp(5.33)
+        marginLeft: wp(5.33)
     },
     headingText: {
         fontSize: hp(2.96),
         color: Colors.themeColor,
-        fontWeight: '500',
+        fontFamily: Fonts.Medium,
         marginLeft: wp(3.2)
     },
     hiText: {
