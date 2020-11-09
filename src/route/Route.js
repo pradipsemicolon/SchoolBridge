@@ -21,6 +21,8 @@ import TeacherComments from '../screen/TeacherComment/TeacherComments';
 import Gallery from '../screen/Gallery/Gallery';
 import SubListGallery from '../screen/SubListGallery/SubListGallery';
 import PreviewImage from '../screen/SubListGallery/PreviewImage';
+import Portfolio from '../screen/Portfolio/Portfolio';
+import AdmissionEnquiry from '../screen/AdmissionEnquiry/AdmissionEnquiry';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator()
@@ -72,7 +74,7 @@ export default class Route extends Component {
     render() {
         return (
             <NavigationContainer >
-                <Stack.Navigator initialRouteName='PreviewImage' headerMode='none'>
+                <Stack.Navigator initialRouteName='Portfolio' headerMode='none'>
                     <Stack.Screen name="Login" component={Login} />
                     <Stack.Screen name="main" component={BottomTab} />
                     <Stack.Screen name="AddLink" component={AddLink} />
@@ -84,6 +86,8 @@ export default class Route extends Component {
                     <Stack.Screen name="Gallery" component={Gallery} />
                     <Stack.Screen name="SubListGallery" component={SubListGallery} />
                     <Stack.Screen name="PreviewImage" component={PreviewImage} />
+                    <Stack.Screen name="Portfolio" component={Portfolio} />
+                    <Stack.Screen name="AdmissionEnquiry" component={AdmissionEnquiry} />
                 </Stack.Navigator>
             </NavigationContainer>
 
