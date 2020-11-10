@@ -5,19 +5,26 @@ import { LoginStyle } from '../Login/LoginStyle'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Fonts } from '../../utils/Fonts';
+import DropDown from '../../components/Portfolio/DropDown';
+import Calender from '../../components/Portfolio/Calender';
 
 export default class AdmissionEnquiry extends Component {
+
     render() {
         return (
             <View style={styles.mainView}>
+
                 <SafeAreaView >
+
                     <View style={[LoginStyle.headerView, { marginTop: hp(2.46) }]}>
                         <TouchableOpacity>
                             <Icon name="angle-left" size={25} color={Colors.themeColor} />
                         </TouchableOpacity>
 
-                        <Text style={LoginStyle.headingText}>Meal Calender</Text>
+                        <Text style={LoginStyle.headingText}>Admission Enquiry</Text>
                     </View>
+
+
 
                     <View style={styles.cornerView} >
                         <ScrollView>
@@ -25,22 +32,24 @@ export default class AdmissionEnquiry extends Component {
 
                                 <View style={{ marginBottom: hp(4.93) }}>
                                     <Text style={styles.headText}>Select Class* </Text>
-                                    <TouchableOpacity>
+                                    <TouchableOpacity onPress={() => this.drop1.showMenu()}>
                                         <View style={styles.classView}>
                                             <Text style={styles.titleHeadText}>Playground</Text>
-                                            <Icon name="chevron-down" size={15} color={Colors.blackColor} />
+                                            <DropDown ref={ref => this.drop1 = ref} />
                                         </View>
                                     </TouchableOpacity>
-                                </View>
 
+
+                                </View>
                                 <View style={{ marginBottom: hp(4.93) }}>
                                     <Text style={styles.headText}>Select Enquiry Type* </Text>
-                                    <TouchableOpacity>
+                                    <TouchableOpacity onPress={() => this.drop2.showMenu()}>
                                         <View style={styles.classView}>
                                             <Text style={styles.titleHeadText}>Facebook</Text>
-                                            <Icon name="chevron-down" size={15} color={Colors.blackColor} />
+                                            <DropDown ref={ref => this.drop2 = ref} />
                                         </View>
                                     </TouchableOpacity>
+
                                 </View>
 
                                 <View style={{ marginBottom: hp(4.93) }}>
@@ -81,10 +90,13 @@ export default class AdmissionEnquiry extends Component {
                                 </View>
 
                             </View>
+
                         </ScrollView>
                     </View>
                 </SafeAreaView>
-            </View>
+                <Calender />
+
+            </View >
         )
     }
 }
@@ -147,5 +159,12 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         borderBottomColor: 'rgba(0,0,0,0.1)',
         borderBottomWidth: 1
+    },
+    menuStyles: { width: '100%', height: '100%', width: wp(65), paddingHorizontal: wp(5.33) },
+    lineView: { height: 1, backgroundColor: 'rgba(0,0,0,0.1)' },
+    menuText: { paddingVertical: hp(2.46), textAlign: 'left', paddingLeft: wp(2.67), fontFamily: Fonts.Regular, fontSize: hp(1.72) },
+    menuView: {
+        width: wp(63.2),
+        alignSelf: 'flex-end'
     }
 })
