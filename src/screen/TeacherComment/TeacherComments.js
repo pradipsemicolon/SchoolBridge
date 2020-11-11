@@ -125,7 +125,6 @@ export default class TeacherComments extends Component {
               keyExtractor={(item, index) => index}
               renderItem={({ item }) => {
                 return (
-
                   <View style={[styles.cellMainView,]}>
                     <TouchableOpacity >
                       <View style={{ flexDirection: 'row' }}>

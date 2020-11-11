@@ -86,7 +86,7 @@ export const DiaryStyles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        width: '80%',
+        width: '100%',
     },
     messageView: {
         flexDirection: 'row',
