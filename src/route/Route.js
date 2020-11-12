@@ -27,6 +27,7 @@ import ContactUs from '../screen/ContactUs/ContactUs';
 import E_learning from '../screen/E-Learning/E_learning';
 import Subject from '../screen/E-Learning/Subject';
 import VirtualClassRoom from '../screen/VirtualClassRoom/VirtualClassRoom';
+import TestReport from '../screen/TestReport/TestReport';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator()
@@ -78,7 +79,7 @@ export default class Route extends Component {
     render() {
         return (
             <NavigationContainer >
-                <Stack.Navigator initialRouteName='E_learning' headerMode='none'>
+                <Stack.Navigator initialRouteName='TestReport' headerMode='none'>
                     <Stack.Screen name="Login" component={Login} />
                     <Stack.Screen name="main" component={BottomTab} />
                     <Stack.Screen name="AddLink" component={AddLink} />
@@ -96,6 +97,7 @@ export default class Route extends Component {
                     <Stack.Screen name="E_learning" component={E_learning} />
                     <Stack.Screen name="Subject" component={Subject} />
                     <Stack.Screen name="VirtualClassRoom" component={VirtualClassRoom} />
+                    <Stack.Screen name="TestReport" component={TestReport} />
                 </Stack.Navigator>
             </NavigationContainer>
 
